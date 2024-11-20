@@ -102,7 +102,6 @@ revenue_results = revenue.calculate_revenue(swu_results, swu_price, market_share
 # SUMMARY
 # ================================
 st.markdown("# Centrus Opportunity in 2030")
-
 revenue_fmt = f"{revenue_results['total'] / 1e9:.2f}"
 nuclear_demand_fmt = f"{nuclear_demand:.1f}"
 
@@ -116,6 +115,7 @@ with col2:
     st.metric("Total Nuclear Demand 2030", f"{nuclear_demand_fmt} TWh")
 with col3:
     st.metric("Total Revenue 2030", f"{revenue_fmt}B$")
+
 
 # ================================
 # WORKFLOW DIAGRAM
@@ -132,6 +132,20 @@ diagram = draw_workflow(
 
 # Display the diagram
 st.graphviz_chart(diagram)
+
+# ================================
+# Text
+# ================================
+st.markdown(
+    """
+    This app calculates the potential revenue for Centrus in 2030 based on the demand for nuclear fuel and the revenue generated from selling SWUs.
+    - The nuclear market is split into two segments: LEU and HALEU.
+    - The default AI Datacenter demand is 33 TWh[^6]
+    - The IEA estimates the global AI Datacenter demand will be between 17 TWh -- 57 TWh by 2030[^6]
+    - SemiAnalysis estimates AI Datacenter demand will be 45TWh -- 250TWh by 2030[^2]
+    - Leopold Arschenbrenner estimates AI Datacenter demand will be between 876TWh -- 4300 TWh by 2030[^11]
+    """
+)
 
 # ================================
 # BODY OF RESULTS
@@ -170,7 +184,7 @@ references = {
     "8": "[EIA - 2023 US Electricity Explained](https://www.eia.gov/energyexplained/electricity/electricity-in-the-us-generation-capacity-and-sales.php#:~:text=At%20the%20end%20of%202023,electricity%2Dgeneration%20capacity%20in%202023.)",
     "9": "[Our World in Data - Energy Consumption](https://ourworldindata.org/energy)",
     "10": "[Ember Energy Yearly Electricity Data](https://ember-climate.org/data-catalogue/yearly-electricity-data/)",
-    "11": "[]()",
+    "11": "[Situational Awareness - AI Datacenter Power Demand](https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/#Power)",
 }
 
 
