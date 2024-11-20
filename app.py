@@ -7,12 +7,23 @@ from utils.workflow_diagram import draw_workflow
 # SIDEBAR
 # ================================
 # Sidebar Inputs
+enable_advanced = st.sidebar.checkbox("Enable Advanced Settings", value=False)
+
 st.sidebar.header("2030 Demand Inputs")
-base_demand = st.sidebar.number_input("Base Demand 2023 (TWh)", value=4250, step=10)
-transport = st.sidebar.number_input("Transport 2030 (TWh)", value=250, step=10)
-buildings = st.sidebar.number_input("Buildings 2030 (TWh)", value=50, step=10)
+base_demand = st.sidebar.number_input(
+    "Base Demand 2023 (TWh)[^9]", value=4250, step=10, disabled=not enable_advanced
+)
+transport = st.sidebar.number_input(
+    "Transport 2030 (TWh)[^6]", value=250, step=10, disabled=not enable_advanced
+)
+buildings = st.sidebar.number_input(
+    "Buildings 2030 (TWh)[^6]", value=50, step=10, disabled=not enable_advanced
+)
 non_data_center_industry = st.sidebar.number_input(
-    "non_data_center Industry 2030 (TWh)[^7]", value=67, step=10
+    "non_data_center Industry 2030 (TWh)[^7]",
+    value=67,
+    step=10,
+    disabled=not enable_advanced,
 )
 data_center = st.sidebar.number_input("Data Center 2030 (TWh)", value=33, step=10)
 nuclear_share = st.sidebar.slider("Nuclear Share 2030 (%)", 0.0, 1.0, 0.18)
@@ -20,15 +31,23 @@ share_of_nuclear_leu = st.sidebar.slider("LEU % of Nuclear 2030 (%)", 0.0, 1.0, 
 
 st.sidebar.header("Fuel Efficiency Inputs")
 nuclear_thermal_efficiency = st.sidebar.slider(
-    "Nuclear Thermal Efficiency (%)", 0.0, 1.0, 0.33
+    "Nuclear Thermal Efficiency (%)", 0.0, 1.0, 0.33, disabled=not enable_advanced
 )
-leu_burnup = st.sidebar.number_input("LEU Burnup (MWd/tU)", value=4.5e4)
-haleu_burnup = st.sidebar.number_input("HALEU Burnup (MWd/tU)", value=1e5)
+leu_burnup = st.sidebar.number_input(
+    "LEU Burnup (MWd/tU)", value=4.5e4, disabled=not enable_advanced
+)
+haleu_burnup = st.sidebar.number_input(
+    "HALEU Burnup (MWd/tU)", value=1e5, disabled=not enable_advanced
+)
 
 st.sidebar.header("SWU Inputs")
 swu_price = st.sidebar.number_input("SWU Price ($/SWU)", value=107)
-swu_leu = st.sidebar.number_input("LEU SWUs per kg (SWU/kg)", value=5)
-swu_haleu = st.sidebar.number_input("HALEU SWUs per kg (SWU/kg)", value=30)
+swu_leu = st.sidebar.number_input(
+    "LEU SWUs per kg (SWU/kg)", value=5, disabled=not enable_advanced
+)
+swu_haleu = st.sidebar.number_input(
+    "HALEU SWUs per kg (SWU/kg)", value=30, disabled=not enable_advanced
+)
 
 # Computation inputs
 market_share_leu = st.sidebar.slider("LEU Market Share (Centrus)", 0.0, 1.0, 0.5)
@@ -114,7 +133,6 @@ diagram = draw_workflow(
 # Display the diagram
 st.graphviz_chart(diagram)
 
-
 # ================================
 # BODY OF RESULTS
 # ================================
@@ -150,6 +168,9 @@ references = {
     "6": "[IEA World Energy Outlook October 2024](https://www.iea.org/reports/world-energy-outlook-2024)",
     "7": "We set the non-data center industry demand to 67 TWh because we assume that the data center demand will grow by 33 TWh by 2030[^6]",
     "8": "[EIA - 2023 US Electricity Explained](https://www.eia.gov/energyexplained/electricity/electricity-in-the-us-generation-capacity-and-sales.php#:~:text=At%20the%20end%20of%202023,electricity%2Dgeneration%20capacity%20in%202023.)",
+    "9": "[Our World in Data - Energy Consumption](https://ourworldindata.org/energy)",
+    "10": "[Ember Energy Yearly Electricity Data](https://ember-climate.org/data-catalogue/yearly-electricity-data/)",
+    "11": "[]()",
 }
 
 

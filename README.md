@@ -2,6 +2,8 @@
 
 A Streamlit application for forecasting nuclear energy demand and revenue potential through 2030.
 
+https://varaenergyuse.streamlit.app/
+
 ![Streamlit App](assets/Pasted%20image%2020241120203512.png)
 
 ## Modules
@@ -24,6 +26,11 @@ uv sync
 uv run streamlit run app.py
 ```
 
+When publishing:
+```bash
+uv pip compile pyproject.toml --output-file requirements.txt
+```
+
 ## Data Sources
 
 ### Historical Data
@@ -41,3 +48,6 @@ Ember (2024) and Energy Institute - Statistical Review of World Energy (2024), p
 
 ## License
 MIT
+
+## How this started...
+![How this started...](assets/PXL_20241120_125802610.jpg)
