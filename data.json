@@ -1,0 +1,12 @@
+{
+    "base_demand": {"value": 1000, "unit": "megawatt_hour"},
+    "nuclear_share": {"value": 0.1, "unit": "dimensionless"},
+    "leu_share": {"value": 0.8, "unit": "dimensionless"},
+    "haleu_share": {"value": 0.2, "unit": "dimensionless"},
+    "leu_kg_per_mw_h": {"value": 100, "unit": "kilogram / megawatt_hour"},
+    "haleu_kg_per_mw_h": {"value": 100, "unit": "kilogram / megawatt_hour"},
+    "leu_centrus_market_share": {"value": 0.5, "unit": "dimensionless"},
+    "haleu_centrus_market_share": {"value": 0.8, "unit": "dimensionless"},
+    "leu_price": {"value": 100, "unit": "dollar / kilogram"},
+    "haleu_price": {"value": 100, "unit": "dollar / kilogram"}
+}
