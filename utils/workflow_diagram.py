@@ -20,11 +20,11 @@ def draw_workflow(
     dot.node("A", f"Base Demand (2023)\n{base_demand_fmt} TWh")
     dot.node(
         "B1",
-        f"Data Center Demand (2030)\n{demand_results['data_center']:,.0f} TWh",
+        f"Data Center Demand (2030)\n+{demand_results['data_center']:,.0f} TWh",
     )
     dot.node(
         "B2",
-        f"Other Additional Demand\n{demand_results['transport'] + demand_results['buildings'] + demand_results['non_data_centre_industry']:,.0f} TWh",
+        f"Other Additional Demand\n+{demand_results['transport'] + demand_results['buildings'] + demand_results['non_data_centre_industry']:,.0f} TWh",
     )
     dot.node("C", f"Total Demand (2030)\n{total_demand_fmt} TWh")
     dot.node("D", f"Nuclear Share\n{nuclear_share * 100}%\n{nuclear_demand_fmt} TWh")
