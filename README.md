@@ -6,7 +6,7 @@ A Streamlit application for forecasting nuclear energy demand and revenue potent
 
 - **US Demand Module**: Calculates total energy demand (2023 -> 2030)
     - **Nuclear Supply**: Determines nuclear energy share in total energy mix
-- **Fuel Efficiency Module**: Computes LEU/HALEU energy output per unit (TWh/kg)
+- **Fuel Efficiency Module**: Computes LEU/HALEU energy output per unit (TWh/kg) ([burnup](https://www.euronuclear.org/glossary/burn-up) is the published figure)
 - **SWU Module**: Converts fuel demand to separative work units (SWU)
 - **Revenue Module**: Calculates revenue based on fuel supply and pricing
 
