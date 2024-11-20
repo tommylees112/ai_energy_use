@@ -138,12 +138,12 @@ st.graphviz_chart(diagram)
 # ================================
 st.markdown(
     """
-    This app calculates the potential revenue for Centrus in 2030 based on the demand for nuclear fuel and the revenue generated from selling SWUs.
+    This app calculates the potential revenue for Centrus in 2030 based on the US domestic demand for nuclear fuel and the revenue generated from selling SWUs.
     - The nuclear market is split into two segments: LEU and HALEU.
-    - The default AI Datacenter demand is 33 TWh[^6]
-    - The IEA estimates the global AI Datacenter demand will be between 17 TWh -- 57 TWh by 2030[^6]
-    - SemiAnalysis estimates AI Datacenter demand will be 45TWh -- 250TWh by 2030[^2]
-    - Leopold Arschenbrenner estimates AI Datacenter demand will be between 876TWh -- 4300 TWh by 2030[^11]
+    - The [default](https://www.iea.org/reports/world-energy-outlook-2024) Datacenter demand is 33 TWh
+    - [The IEA](https://www.iea.org/reports/world-energy-outlook-2024) estimates the US Datacenter demand will be between 17 TWh -- 57 TWh by 2030
+    - [SemiAnalysis](https://semianalysis.com/2024/03/13/ai-datacenter-energy-dilemma-race/) estimates US Datacenter demand will be 45TWh -- 250TWh by 2030
+    - [Leopold Arschenbrenner](https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/#Power) estimates US Datacenter demand will be between 876TWh -- 4300 TWh by 2030
     """
 )
 
@@ -180,11 +180,12 @@ references = {
     "4": "[Nuclear Thermal Efficiency 33%](https://www.nuclear-power.com/nuclear-engineering/thermodynamics/laws-of-thermodynamics/thermal-efficiency/)",
     "5": "[LWR (using LEU) Burnup 4.5e4 MWd/tU](https://www.euronuclear.org/glossary/burn-up/) and [here too](https://www.nuclear-power.com/nuclear-power/reactor-physics/reactor-operation/fuel-burnup/)",
     "6": "[IEA World Energy Outlook October 2024](https://www.iea.org/reports/world-energy-outlook-2024)",
-    "7": "We set the non-data center industry demand to 67 TWh because we assume that the data center demand will grow by 33 TWh by 2030[^6]",
+    "7": "We set the non-data center industry demand to 67 TWh because the default US data center demand is 33 TWh. IEA has Data Center demand at 223 TWh. US is 15% of global power demand. Assuming 15% of data center demand (underestimate), we get 223 TWh * 0.15 = 33.45 TWh",
     "8": "[EIA - 2023 US Electricity Explained](https://www.eia.gov/energyexplained/electricity/electricity-in-the-us-generation-capacity-and-sales.php#:~:text=At%20the%20end%20of%202023,electricity%2Dgeneration%20capacity%20in%202023.)",
     "9": "[Our World in Data - Energy Consumption](https://ourworldindata.org/energy)",
     "10": "[Ember Energy Yearly Electricity Data](https://ember-climate.org/data-catalogue/yearly-electricity-data/)",
     "11": "[Situational Awareness - AI Datacenter Power Demand](https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/#Power)",
+    "12": "[SWU Prices in 2023](https://www.eia.gov/uranium/marketing/#:~:text=Uranium%20feed%2C%20enrichment%20services%2C%20uranium,in%202022%20(Table%2018)) averaged $107/SWU",
 }
 
 
