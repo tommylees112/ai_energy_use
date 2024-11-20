@@ -2,6 +2,8 @@
 
 A Streamlit application for forecasting nuclear energy demand and revenue potential through 2030.
 
+![Streamlit App](assets/Pasted%20image%2020241120203512.png)
+
 ## Modules
 
 - **US Demand Module**: Calculates total energy demand (2023 -> 2030)
