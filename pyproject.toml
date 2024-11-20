@@ -12,6 +12,7 @@ dependencies = [
     "pandas>=2.2.3",
     "pint>=0.24.4",
     "plotly>=5.24.1",
+    "poetry>=1.8.4",
     "scikit-learn>=1.5.2",
     "scipy>=1.14.1",
     "streamlit>=1.40.1",
